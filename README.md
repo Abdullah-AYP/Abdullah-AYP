@@ -1,25 +1,35 @@
-<h1 align="center">Hi there, I'm Abdullah 👋</h1>
-<h3 align="center">CS Student at National University of Computer & Emerging Sciences, Karachi | Passionate about AI, ML & Systems Engineering</h3>
+<div align="center">
+  <h1>Hi there, I'm Abdullah 👋</h1>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=0e75b6&center=true&vCenter=true&width=600&lines=CS+Student+@+FAST+NUCES;AI,+ML+%26+Systems+Engineering;Computer+Vision+Developer;Bridging+Theory+%26+Scalable+Tech" alt="Typing SVG" />
+</div>
 
+<br/>
+
+<table width="100%" border="0" align="center">
+  <tr>
+    <td width="60%" valign="top">
+      <h3>🚀 About Me</h3>
+      <ul>
+        <li>🔭 Building scalable semester projects for <b>Operating Systems, Database Systems, and AI</b>.</li>
+        <li>🌱 Deepening knowledge in <b>AI, Machine Learning</b>, and core <b>Computer Science</b>.</li>
+        <li>👁️ Hands-on experience in <b>Computer Vision</b> (Semantic & Instance Segmentation using U-Net, SegFormer, DeepLab, YOLOv8).</li>
+        <li>💻 Daily driver is <b>macOS</b>; bridging low-level system mechanics with high-level ML models.</li>
+        <li>🤝 Using tech for social good and community development.</li>
+      </ul>
+    </td>
+    <td width="40%" valign="top" align="center">
+      <h3>📈 GitHub Stats</h3>
+      <img src="https://github-readme-stats.vercel.app/api?username=Abdullah-AYP&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="GitHub Stats" width="100%"/>
+      <br/><br/>
+      <img src="https://komarev.com/ghpvc/?username=Abdullah-AYP&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<h3 align="center">🛠️ Tech Stack & Tools</h3>
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Abdullah-AYP&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
-</p>
-
----
-
-### 🚀 About Me
-
-- 🔭 I’m currently working on scalable semester projects for **Operating Systems, Database Systems, and Artificial Intelligence**.
-- 🌱 I’m deepening my knowledge generally in **AI and Machine Learning**, alongside my ongoing **Computer Science** studies. 
-- 👁️ I have hands-on experience in **Computer Vision**, specifically working with **Semantic and Instance Segmentation** (using models like U-Net, SegFormer, DeepLab, and YOLOv8).
-- 💻 My daily driver is **macOS**, and I enjoy bridging the gap between low-level system mechanics and high-level machine learning models.
-- 🤝 I strongly believe in using tech for social good and community development.
-
----
-
-### 🛠️ Tech Stack & Tools
-
-<p align="left">
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch" />
@@ -30,32 +40,37 @@
   <img src="https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS" />
 </p>
 
----
+<br/>
 
-### 🔥 Featured Projects
+<h3>🔥 Featured Projects</h3>
+<table width="100%" border="0">
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🌍 <a href="https://github.com/Abdullah-AYP/Humanitarian-Aid-Distribution-System">Humanitarian Aid System (Gaza)</a></h4>
+      <p>Complex logistical routing optimizing aid delivery. Implements advanced Data Structures (AVL Trees, Heaps, Graphs) for resource allocation.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🚀 <a href="https://github.com/Abdullah-AYP/CV_HACKATHON_AIRLINES">Space Station Safety Detector</a></h4>
+      <p>AI-driven Computer Vision hackathon project focusing on <b>Instance Segmentation</b>. Utilizes <b>YOLOv8</b> for real-time safety equipment classification.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🗺️ <a href="https://github.com/Abdullah-AYP/ML-DATATHON">Terrain Semantic Segmentation</a></h4>
+      <p>Machine learning hackathon project for pixel-level landscape classification using advanced architectures like <b>U-Net</b> and <b>SegFormer</b>.</p>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <h4>🏆 Top Languages</h4>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abdullah-AYP&layout=compact&theme=radical&hide_border=true&bg_color=0D1117" alt="Top Languages" width="80%"/>
+    </td>
+  </tr>
+</table>
 
-#### 🌍 Humanitarian Aid Distribution System (Gaza)
-A complex logistical routing and management system designed to optimize the delivery of humanitarian aid. 
-* **Tech Details:** Implements advanced Data Structures (leveraging core ADTs like AVL Trees, Heaps, and Graphs) to ensure efficient resource allocation and tracking under constrained conditions.
-* [🔗 Link to Repository](https://github.com/Abdullah-AYP/Humanitarian-Aid-Distribution-System)
-
-#### 🚀 Space Station Safety Equipment Detector
-An AI-driven computer vision project developed during a competitive hackathon focusing on **Instance Segmentation**. 
-* **Tech Details:** Utilizes **YOLOv8** and synthetic data generation to detect and classify critical safety equipment within a simulated space station environment in real-time.
-* [🔗 Link to Repository](https://github.com/Abdullah-AYP/CV_HACKATHON_AIRLINES)
-
-#### 🗺️ Terrain & Environmental Semantic Segmentation
-A machine learning hackathon project focused on precise pixel-level classification of natural landscapes.
-* **Tech Details:** Leveraged advanced segmentation architectures including **U-Net** and **SegFormer** to accurately segment and classify complex terrains, rocks, and environmental features.
-* [🔗 Link to Repository](https://github.com/Abdullah-AYP/ML-DATATHON)
-
----
-
-### 📈 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Abdullah-AYP&show_icons=true&theme=radical" alt="GitHub Stats" />
-</p>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abdullah-AYP&layout=compact&theme=radical" alt="Top Languages" />
-</p>
+<div align="center">
+  <h3>🐍 My Coding Activity</h3>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Abdullah-AYP/Abdullah-AYP/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Abdullah-AYP/Abdullah-AYP/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Abdullah-AYP/Abdullah-AYP/output/github-contribution-grid-snake.svg">
+  </picture>
+</div>

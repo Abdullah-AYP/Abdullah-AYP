@@ -2,39 +2,47 @@ name: Generate GitHub Stats SVGs
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs automatically at midnight UTC daily
-  workflow_dispatch: # Allows you to run it manually from the Actions tab
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+# Grant the action permission to push files back to your repository
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Clone and Run Stats Generator Locally
-        env:
-          PAT_1: ${{ secrets.PAT_1 }}
         run: |
-          # Clone the official stats engine
           git clone https://github.com/anuraghazra/github-readme-stats.git
           cd github-readme-stats
           npm install
           
-          # Start the server in the background
-          npm start &
-          sleep 15 # Give the server time to boot up
-
-          # Fetch General Stats Card
-          curl "http://localhost:9000/api?username=Abdullah-AYP&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" > ../github-stats.svg
-
-          # Fetch Top Languages Card
-          curl "http://localhost:9000/api/top-langs/?username=Abdullah-AYP&layout=compact&theme=radical&hide_border=true&bg_color=0D1117" > ../top-langs.svg
+          # Explicitly create the .env file 
+          echo "PAT_1=${{ secrets.PAT_1 }}" > .env
+          
+          # Start server and capture logs
+          npm start > server.log 2>&1 &
+          
+          # Wait for server to boot
+          sleep 15
+          
+          # Print logs to debug if it fails
+          echo "--- SERVER LOGS ---"
+          cat server.log
+          
+          # Fetch SVGs using 127.0.0.1 to avoid localhost routing issues
+          curl --fail "http://127.0.0.1:9000/api?username=Abdullah-AYP&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" > ../github-stats.svg
+          curl --fail "http://127.0.0.1:9000/api/top-langs/?username=Abdullah-AYP&layout=compact&theme=radical&hide_border=true&bg_color=0D1117" > ../top-langs.svg
 
       - name: Commit and Push SVGs
         run: |

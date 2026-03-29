@@ -19,7 +19,7 @@
     </td>
     <td width="40%" valign="top" align="center">
       <h3>📈 GitHub Stats</h3>
-      <img src="https://github-readme-stats.vercel.app/api?username=Abdullah-AYP&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="GitHub Stats" width="100%"/>
+      <img src="./github-stats.svg" alt="GitHub Stats" width="100%"/>
       <br/><br/>
       <img src="https://komarev.com/ghpvc/?username=Abdullah-AYP&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
     </td>
@@ -61,7 +61,7 @@
     </td>
     <td width="50%" valign="top" align="center">
       <h4>🏆 Top Languages</h4>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abdullah-AYP&layout=compact&theme=radical&hide_border=true&bg_color=0D1117" alt="Top Languages" width="80%"/>
+      <img src="./top-langs.svg" alt="Top Languages" width="80%"/>
     </td>
   </tr>
 </table>

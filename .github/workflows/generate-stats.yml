@@ -5,7 +5,6 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
-# Grant the action permission to push files back to your repository
 permissions:
   contents: write
 
@@ -27,20 +26,31 @@ jobs:
           cd github-readme-stats
           npm install
           
-          # Explicitly create the .env file 
+          # Install express to run our custom local server
+          npm install express dotenv
+          
+          # Inject a tiny Express server to run the Vercel functions
+          cat << 'EOF' > server.js
+          const express = require('express');
+          const app = express();
+          require('dotenv').config();
+          
+          app.get('/api', require('./api/index.js'));
+          app.get('/api/top-langs', require('./api/top-langs.js'));
+          
+          app.listen(9000, () => console.log('Local server started on 9000'));
+          EOF
+          
+          # Create the .env file with your PAT
           echo "PAT_1=${{ secrets.PAT_1 }}" > .env
           
-          # Start server and capture logs
-          npm start > server.log 2>&1 &
+          # Boot the local server in the background
+          node server.js &
           
-          # Wait for server to boot
-          sleep 15
+          # Wait 5 seconds for the server to wake up
+          sleep 5
           
-          # Print logs to debug if it fails
-          echo "--- SERVER LOGS ---"
-          cat server.log
-          
-          # Fetch SVGs using 127.0.0.1 to avoid localhost routing issues
+          # Fetch the SVGs directly from our local server
           curl --fail "http://127.0.0.1:9000/api?username=Abdullah-AYP&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" > ../github-stats.svg
           curl --fail "http://127.0.0.1:9000/api/top-langs/?username=Abdullah-AYP&layout=compact&theme=radical&hide_border=true&bg_color=0D1117" > ../top-langs.svg
 
